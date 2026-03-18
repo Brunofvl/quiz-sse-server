@@ -272,10 +272,10 @@ func main() {
 }
 
 func loadConfig() (*Config, error) {
-	supabaseURL := strings.TrimSpace(os.Getenv("SUPABASE_URL"))
-	supabaseKey := strings.TrimSpace(os.Getenv("SUPABASE_ANON_KEY"))
+	supabaseURL := strings.TrimSpace(os.Getenv("JOGO_SUPABASE_URL"))
+	supabaseKey := strings.TrimSpace(os.Getenv("JOGO_SUPABASE_ANON_KEY"))
 	if supabaseURL == "" || supabaseKey == "" {
-		return nil, errors.New("SUPABASE_URL and SUPABASE_ANON_KEY are required")
+		return nil, errors.New("JOGO_SUPABASE_URL and JOGO_SUPABASE_ANON_KEY are required")
 	}
 
 	port := strings.TrimSpace(os.Getenv("PORT"))
